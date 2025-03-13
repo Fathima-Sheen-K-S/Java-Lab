@@ -35,15 +35,18 @@ import java.util.Scanner;
     }
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner
-        int actnum,bal,amt;
-        String acthold;
-        System.out.println("Enter the account number:");
-        System.out.println("Enter the account name:");
-        System.out.println("Enter the balance:")
-        System.out.println("Enter the amount:");
+        Scanner scanner=new Scanner(System.in);
         
-        BankAccount account = new BankAccount(actnum,acthold,amt);
+        System.out.println("Enter the account number:");
+        String actnum = scanner.nextLine();
+        System.out.println("Enter the account name:");
+        String acthold = scanner.nextLine();
+        System.out.println("Enter the balance:");
+        double bal = scanner.nextDouble();
+        System.out.println("Enter the amount:");
+        int amt=scanner.nextInt();
+        
+        BankAccount account = new BankAccount(actnum,acthold,bal);
         
         account.displayAccountInfo();
         account.deposit(500.0);
