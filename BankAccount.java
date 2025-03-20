@@ -4,13 +4,13 @@ import java.util.Scanner;
      String accountHolder;
      double balance;
 
-    public BankAccount(String accountNumber, String accountHolder, double balance) {
+    BankAccount(String accountNumber, String accountHolder, double balance) {
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.balance = balance;
     }
 
-    public void deposit(double amount) {
+     void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
             System.out.println("Deposited: " + amount);
@@ -49,8 +49,8 @@ import java.util.Scanner;
         BankAccount account = new BankAccount(actnum,acthold,bal);
         
         account.displayAccountInfo();
-        account.deposit(500.0);
-        account.withdraw(200.0);
+        account.deposit(amt);
+        account.withdraw(amt);
         account.displayAccountInfo();
     }
 }
